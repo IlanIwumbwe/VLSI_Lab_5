@@ -52,7 +52,20 @@ Original interface
  18     output logic [WIDTH-1:0]  out_data
  19 );
 ```
-**Identify new ports**
+After scan chain insertion
+```sv
+   7 module FIFO(clk, rst_n, clk_en, in_valid, in_ready, in_data, out_valid,
+   8      out_ready, out_data, scan_en, scan_testmode, scan_di, scan_do);
+   9   input clk, rst_n, clk_en, in_valid, out_ready, scan_en,
+  10        scan_testmode, scan_di;
+  11   input [31:0] in_data;
+  12   output in_ready, out_valid, scan_do;
+  13   output [31:0] out_data;
+```
+- `scan_testmode`: Forces design into test mode, disabling or overriding parts of the circuits for testing
+- `scan_di`: Scan data in, the primary serial input to the scan chain
+- `scan_do`: Scan data out, the primary serial output to the scan chain
+- `scan_en`: Enables scan mode by selecting scan input via the multiplexer
 
 Timing before scan chain insertion:
 ```sv
