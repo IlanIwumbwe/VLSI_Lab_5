@@ -107,7 +107,6 @@ Timing after scan chain insertion:
 ```
 We see a difference in the slack time, with that after scan chain insertion, getting negative slack time. The data path is also slightly lower.
 
-**Why?**
 
 Area before insertion:
 ```
