@@ -12,7 +12,8 @@ We configure the DFT scan style
 `scan_en`: Enables scan mode by selecting the scan input via the multiplexer.
 `scan_testmode`: Forces the design into test mode, disabling or overriding parts of the circuit for testing.
 
-`convert_to_scan` command reports percentage of registers available for DFT: ```
+`convert_to_scan` command reports percentage of registers available for DFT: 
+```
 Scan mapping status report
 ==========================
     Scan mapping: converting flip-flops that pass TDRC.
